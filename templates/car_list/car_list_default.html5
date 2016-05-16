@@ -1,0 +1,62 @@
+<div class="car-list-item <?= $this->classList ?>">
+  <?php //die(print_r($this,true)); ?>
+  <div class="row">
+    <div class="col-xs-4 col-xl-2">
+      <?php if ($this->src != ''): ?>
+      <figure class="image_container zoom">
+        <?php if ($this->href != ''): ?>
+        <a href="<?= $this->href ?>" title="<?= $this->title ?>">
+          <?php endif; ?>
+          <?php $this->insert('picture_default', $this->picture); ?>
+          <?php if ($this->href != ''): ?>
+        </a>
+        <?php endif; ?>
+      </figure>
+      <?php endif; ?>
+    </div>
+
+    <div class="col-xs-8 col-xl-10">
+      <?php if ($this->href != ''): ?>
+      <a href="<?= $this->href ?>" title="<?= $this->title ?>">
+      <?php endif; ?>
+
+        <h2><?= $this->name ?></h2>
+      <?php if ($this->href != ''): ?>
+      </a>
+      <?php endif; ?>
+
+      <!-- mobile layout -->
+      <div class="mobile hidden-md-up">
+        <div class="">
+          <div class="car-abstract-middle"><?= $this->abstract ?></div>
+        </div>
+        <div class="">
+          <div class="car-abstract-right">
+            <div class=""><?= $this->initialRegistrationDate ?>/<?= $this->kilometer ?> km</div>
+            <div class="font-weight-bold">CHF <?= number_format($this->price,0,'.',"'") ?>.-</div>
+          </div>
+        </div>
+      </div>
+      <!-- end mobile layout -->
+
+      <!-- desktop layout -->
+      <div class="row desktop hidden-sm-down">
+        <div class="col-lg-6">
+          <div class="car-abstract-middle"><?= $this->abstract ?></div>
+        </div>
+        <div class="col-lg-6">
+          <div class="car-abstract-right">
+            <div class="row">
+              <div class="col-xs-4">Jg: <?= $this->initialRegistrationDate ?></div>
+              <div class="col-xs-4"><?= $this->kilometer ?> km</div>
+              <div class="col-xs-4">CHF <?= number_format($this->price,0,'.',"'") ?>.-</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end desktop layout -->
+    </div>
+
+  </div>
+
+</div>

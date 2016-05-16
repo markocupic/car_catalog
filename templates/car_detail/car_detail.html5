@@ -1,0 +1,135 @@
+<div class="car layout_full block<?= $this->class ?>">
+
+  <h1><?= $this->name ?></h1>
+
+  <div class="row">
+    <div class="car-detail-gallery col-md-6">
+      <?= $this->gallery ?>
+      {{br}}
+    </div>
+    <div class="col-md-6">
+      <h2>Fahrzeugdaten</h2>
+      <div class="car-properties">
+        <div class="row">
+          <div class="car-property-label col-xs-6">
+            <?= $this->arrLegends['initialRegistrationDate'] ?>
+          </div>
+          <div class="car-property-value col-xs-6">
+            <?= $this->initialRegistrationDate ?>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="car-property-label col-xs-6">
+            <?= $this->arrLegends['kilometer'] ?>
+          </div>
+          <div class="car-property-value col-xs-6">
+            <?= $this->kilometer ?> km
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="car-property-label col-xs-6">
+            <?= $this->arrLegends['transmission'] ?>
+          </div>
+          <div class="car-property-value col-xs-6">
+            <?= $this->arrLegends[$this->transmission] ?>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="car-property-label col-xs-6">
+            <?= $this->arrLegends['gears'] ?>
+          </div>
+          <div class="car-property-value col-xs-6">
+            <?= $this->arrLegends[$this->gears] ?>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="car-property-label col-xs-6">
+            <?= $this->arrLegends['fuel'] ?>
+          </div>
+          <div class="car-property-value col-xs-6">
+            <?= $this->arrLegends[$this->fuel] ?>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="car-property-label col-xs-6">
+            <?= $this->arrLegends['engineCapacity'] ?>
+          </div>
+          <div class="car-property-value col-xs-6">
+            <?= number_format(floatval($this->engineCapacity),1,'.','') ?> l
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="car-property-label col-xs-6">
+            <?= $this->arrLegends['power'] ?>
+          </div>
+          <div class="car-property-value col-xs-6">
+            <?= $this->power ?>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="car-property-label col-xs-6">
+            <?= $this->arrLegends['colorOutside'] ?>
+          </div>
+          <div class="car-property-value col-xs-6">
+            <?= $this->colorOutside ?>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="car-property-label col-xs-6">
+            <?= $this->arrLegends['colorInside'] ?>
+          </div>
+          <div class="car-property-value col-xs-6">
+            <?= $this->colorInside ?>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="font-weight-bold car-property-label col-xs-6">
+            <strong><?= $this->arrLegends['price'] ?></strong>
+          </div>
+          <div class="font-weight-bold car-property-value col-xs-6">
+            <strong>CHF <?= number_format($this->price,0,'.',"'") ?>.-</strong>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {{br}}
+  {{br}}
+  <div class="row flexbox-same-height-outer">
+    <div class="car-property-label flexbox-same-height-item col-md-6">
+      <div class="car-property-state">
+        <h3><?= $this->arrLegends['state'] ?></h3>
+        <div class="text">
+          <?= $this->state ?>
+        </div>
+      </div>
+      {{br}}
+    </div>
+    <div class="car-property-label  flexbox-same-height-item col-md-6">
+      <div class=" car-property-history">
+        <h3><?= $this->arrLegends['history'] ?></h3>
+        <div class="text">
+          <?= $this->history ?>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+  {{br}}
+
+</div>
+
+
+

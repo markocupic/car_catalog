@@ -1,0 +1,132 @@
+.loading-icon {
+  div{
+    text-align: center;
+  }
+
+  .fa {
+    font-size: 60px;
+    color: #ccc;
+  }
+}
+
+.filter-board {
+  background: $gray-lightest;
+  padding: $spacer;
+  .filter-select, .filter-button {
+    width: 100%;
+  }
+  .form-control {
+    border-radius: 0;
+  }
+  select, .btn.filter-button {
+    background-color: $gray-lighter;
+    font-weight: bold;
+    color: $body-color;
+    option {
+      background-color: #fff;
+    }
+  }
+  .btn.filter-button {
+    text-align: left !important;
+    position: relative;
+
+    &:after {
+      right: 0;
+      top: 14px;
+      position: absolute;
+    }
+  }
+}
+
+.ce_hyperlink a:before {
+  font-family: "FontAwesome";
+  content: "\f019";
+  margin-right: 5px;
+}
+
+.kursmodul-sac-liste {
+  border-bottom: 1px solid $gray-lighter;
+  a > h2 {
+    @media (max-width: $screen-sm-max) {
+      text-decoration: underline;
+    }
+  }
+
+
+
+  .row {
+    padding-top: 2rem;
+    padding-bottom: $spacer-y;
+    .kursstufe {
+      color: $gray-light !important;
+      margin-top: $spacer-y/2;
+      margin-bottom: $spacer-y;
+      text-transform: uppercase;
+    }
+    .kursart .label-kursart {
+      cursor: pointer;
+    }
+    .title * {
+      color: $link-color !important;
+    }
+    .detail-item {
+      padding: $table-cell-padding;
+      padding-left: 20px;
+      position: relative;
+      border-bottom: 1px solid $gray-lighter;
+      &:last-child {
+        border-bottom: 0;
+      }
+      &:before {
+        font-family: "FontAwesome";
+        position: absolute;
+        top: 11px;
+        left: 0;
+        color: $body-color;
+      }
+    }
+    .location:before {
+      content: "\f041";
+    }
+    .life-ring:before {
+      content: "\f1cd";
+    }
+    .user:before {
+      content: "\f007";
+    }
+    .home:before {
+      content: "\f015";
+    }
+    .calendar-o:before {
+      content: "\f133";
+    }
+  }
+
+}
+.kursmodul-sac-liste.last{
+  border-bottom:0;
+}
+.event-detailview {
+  .kursstufe {
+    color: green;
+    margin-bottom: $spacer-y;
+    text-transform: uppercase;
+  }
+
+  .event-details-box {
+    padding: $spacer-y 0;
+    .event-detail {
+      padding: $spacer;
+      &.last {
+        border: 0;
+      }
+      &:nth-child(odd) {
+        background: $gray-lightest;
+      }
+    }
+  }
+
+  .event-detail {
+    padding-bottom: $spacer-y;
+  }
+}
